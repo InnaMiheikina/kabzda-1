@@ -8,15 +8,15 @@ import {Field, reduxForm} from "redux-form";
     let addNewPostForm = (props) => {
         return <form onSubmit={props.handleSubmit}>
             <div>
-                <Field name="newPostText" component="textarea" />  {/*окошко для ввода*/}
+                <Field name="newPostText" component="textarea" />  /*окошко для ввода*/
             </div>
             <div>
-                <button> Add post </button>  {/*кнопка,баттон-чтобы нажималась*/}
+                <button>Add post</button>  /*кнопка,баттон-чтобы нажималась*/
             </div>
         </form>;
-    };
+    }
 
-    let addNewPostFormRedux = reduxForm ({form:"profileAddNewPostForm"})(addNewPostForm);
+    addNewPostForm = reduxForm ({form:"profileAddNewPostForm"})(addNewPostForm);
 
     const MyPosts = (props) => {
         let postsElements =
