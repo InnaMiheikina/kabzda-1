@@ -30,11 +30,12 @@ import {Field, reduxForm} from "redux-form";
     return (
         <div className={s.postsBlock}>
           <h3>My posts</h3>
-            <addNewPostFormRedux onSubmit={onAddPost} />
+            <addNewPostForm onSubmit={onAddPost} />
        <div className={s.posts}>
            { postsElements }
         </div>
-    </div> )
+    </div>
+    )
 }
 
 export  default  MyPosts;
