@@ -8,7 +8,7 @@ export const Textarea = ({input,meta, ...props}) => {
             <div>
             <textarea {...props.input} {...props}/>
             </div>
-            <span>{some_error}</span>
+            {meta.touched && meta.error && <span>"some_error"</span> }
         </div>
     )
 }
