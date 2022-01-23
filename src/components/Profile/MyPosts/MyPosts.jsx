@@ -5,24 +5,22 @@ import {Field, reduxForm} from "redux-form";
 
 
 
-    let addNewPostForm = (props) => {
+    let AddNewPostForm = (props) => {
         return <form onSubmit={props.handleSubmit}>
             <div>
-                <Field name="newPostText" component="textarea" />  /*окошко для ввода*/
+                <Field name="newPostText" component="textarea" />
             </div>
             <div>
-                <button>Add post</button>  /*кнопка,баттон-чтобы нажималась*/
+                <button>Add post</button>
             </div>
         </form>;
     }
 
-    addNewPostForm = reduxForm ({form:"profileAddNewPostForm"})(addNewPostForm);
+   let AddNewPostFormRedux = reduxForm ({form: "profileAddNewPostForm"})(AddNewPostForm);
 
     const MyPosts = (props) => {
         let postsElements =
             props.posts.map( p =><Post message={p.message} like={p.like} />);
-
-        let newPostElement = React.createRef();
 
         const onAddPost = (values) => {
             props.addPost(values.newPostText);
@@ -30,7 +28,7 @@ import {Field, reduxForm} from "redux-form";
     return (
         <div className={s.postsBlock}>
           <h3>My posts</h3>
-            <addNewPostForm onSubmit={onAddPost} />
+            <AddNewPostFormRedux onSubmit={onAddPost} />
        <div className={s.posts}>
            { postsElements }
         </div>
