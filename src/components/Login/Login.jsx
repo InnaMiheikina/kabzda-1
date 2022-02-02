@@ -12,7 +12,9 @@ const LoginForm = (props) => {
                        component={Input} />
             </div>
             <div>
-                <Field placeholder={"Password"} name={"password"} component={Input} />
+                <Field placeholder={"Password"} name={"password"}
+                       validate={[required]}
+                       component={Input} />
             </div>
             <div>
                 <Field  component={Input} name={"rememberMe"} type={"checkbox"} /> remember me

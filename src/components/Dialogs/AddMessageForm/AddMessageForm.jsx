@@ -12,7 +12,9 @@ const AddMessageForm = (props) => {
                        validate={[required, maxLength50]}
                        name="newMessageBody" placeholder="Enter your message" />
             </div>
-            <div><button>Send</button></div>
+            <div>
+                <button>Send</button>
+            </div>
         </form>
     )
 }
