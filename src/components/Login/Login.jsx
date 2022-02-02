@@ -46,4 +46,4 @@ const Login = (props) => {
       const mapStateToProps = (state) =>({
     isAuth: state.auth.isAuth
 })
-     export default connect(mapStateToProps, {login} )(Login) ;
+     export default connect(mapStateToProps, {login} )(Login);
